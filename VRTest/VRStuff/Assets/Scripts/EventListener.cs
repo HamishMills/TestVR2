@@ -7,17 +7,19 @@ public class EventListener : MonoBehaviour {
     private int CurrentColor = 0;
     private Renderer _renderer;
     private Color[] aColors = new Color[] { Color.red, Color.blue, Color.green };
+    //  public GvrControllerInput abcd;// = gameObject.GetComponent<GvrControllerInput>();
 
-  //  public GvrControllerInput abcd;// = gameObject.GetComponent<GvrControllerInput>();
 
-    
+    public GvrControllerInputDevice ControllerInputDevice;
 
     // Use this for initialization
     void Start () {
-     //  _renderer = gameObject.GetComponent<Renderer>();
+       _renderer = gameObject.GetComponent<Renderer>();
+
+     
      //  abcd = GameObject.FindObjectOfType(typeof(GvrControllerInput)) as GvrControllerInput;
      //  abcd.
-    }
+}
 	
 	public void OnEnter()
     {
@@ -49,7 +51,10 @@ public class EventListener : MonoBehaviour {
 
     public void OnAppClick()
     {
-
+        if ()
+        {
+            _renderer.material.color = Color.black;
+        }
     }
 
     public void OnRelease()
